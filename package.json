@@ -26,7 +26,8 @@
     "cors": "^2.8.5",
     "encoding": "^0.1.13",
     "firebase": "^8.0.2",
-    "firebase-admin": "^9.4.1"
+    "firebase-admin": "^9.4.1",
+    "mongoose": "^5.10.16"
   },
   "devDependencies": {
     "body-parser": "^1.19.0",
