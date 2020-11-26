@@ -7,6 +7,17 @@ const bodyParser = require("body-parser");
 const BackRouter = require("./routes/routes");
 const SocketRoute = require("./routes/SocketRoute")
 const router = express.Router();
+const mongoose = require("mongoose")
+var uri =
+  "mongodb+srv://jayanth:jayanth1610120@cluster0.rdnwp.mongodb.net/chattercapp?retryWrites=true&w=majority";
+mongoose
+  .connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+  .then(() => {
+    console.log("connedto mdb");
+  });
 router.get("/", (req, res) => {
   res.writeHead(200, { "Content-Type": "text/html" });
   res.write("<h1>Hello from Express.js!</h1>");
